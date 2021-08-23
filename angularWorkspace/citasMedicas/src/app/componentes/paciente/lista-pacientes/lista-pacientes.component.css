@@ -1,0 +1,10 @@
+
+.btn-black{
+    background-color:rgba(17, 63, 8, 0.788);
+    color: #fff;
+}
+
+.btn-secondary{
+    background-color:rgb(176, 199, 72);
+    color: rgb(27, 43, 2);
+}

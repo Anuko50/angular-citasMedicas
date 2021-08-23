@@ -1,0 +1,30 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- <img src="../../assets/832751427db0d1154877e76dc39a0b0c.jpg" id="bg" alt=""> -->
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>Bienvenido<br> Página de inicio</h2>
+            <p>Registrate o date de alta para acceder al servicio.</p>
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form>
+                  <div class="form-group">
+                     <label>Nombre de usuario:</label>
+                     <input [(ngModel)] = "usernameValor" name="usernameValor" type="text" class="form-control" placeholder="Nombre de usuario" >
+                  </div>
+                  <div class="form-group">
+                     <label>Clave de la cuenta:</label>
+                     <input [(ngModel)] = "claveValor" name="claveValor" type="password" class="form-control" placeholder="Clave" >
+                  </div>
+                  <button type="submit" class="btn btn-black" (click)="loggeando()">Login</button>
+                  <button type="submit" style="margin-left: 10px;" class="btn btn-secondary" (click)="goToRegistro()">Registro</button>
+               </form>
+            </div>
+         </div>
+      </div>

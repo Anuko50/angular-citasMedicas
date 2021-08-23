@@ -1,0 +1,13 @@
+
+.btn-secondary{
+    background-color:rgb(176, 199, 72);
+    color: rgb(41, 65, 2);
+}
+
+.navbar-toggler{
+    background-color: rgb(146, 168, 95);
+}
+
+.navbar-collapse{
+    background-color: rgb(146, 168, 95);
+}

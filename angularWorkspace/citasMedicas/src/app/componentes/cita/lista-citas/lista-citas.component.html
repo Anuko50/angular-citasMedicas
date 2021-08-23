@@ -1,0 +1,36 @@
+<div class="row" style="margin-bottom: 20px; margin-top: 50px; margin-bottom: 50px;">
+    <app-nav-bar></app-nav-bar>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Citas:</h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="row">id de la cita:</th>
+                <th scope="row">fecha y hora: </th>
+                <th scope="row">motivo de la cita:</th>
+                <th scope="row">id del Medico asociado:</th>
+                <th scope="row">id del Paciente asociado:</th>
+                <th scope="row">id del Diagnóstico asociado:</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of citas">
+                    <td>{{ c.id }}</td>
+                    <td>{{ c.fechaHora }}</td>
+                    <td>{{ c.motivoCita }}</td>
+                    <td>{{ c.medico }} </td>
+                    <td>{{ c.paciente}}</td>
+                    <td>{{ c.diagnostico }}</td>
+                    <td>
+                      <button (click)="deleteCita(c.id)" class="btn btn-black" style="margin-left: 10px">Eliminar</button>
+                  </td>  
+                  </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+

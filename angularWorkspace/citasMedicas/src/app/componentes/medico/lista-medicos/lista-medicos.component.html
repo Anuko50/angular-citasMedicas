@@ -1,0 +1,46 @@
+<div class="row" style="margin-bottom: 20px; margin-top: 50px; margin-bottom: 50px;">
+    <app-nav-bar></app-nav-bar>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Médicos:</h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="row">id del médico:</th>
+                <th scope="row">Nombre de usuario:</th>
+                <th scope="row">Nombre:</th>
+                <th scope="row">Apellidos:</th>
+                <th scope="row">Número de colegiado:</th>
+                <th scope="row">pacientes:</th> 
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let m of medicos">
+                    <td >{{ m.id }}</td>
+                    <td>{{ m.user }}</td>
+                    <td>{{ m.nombre }}</td>
+                    <td>{{ m.apellidos }}</td>
+                    <td>{{ m.numColegiado }}</td>
+                    <table>
+                      <tr *ngFor="let p of m.pacientes">
+                      <td style="padding-left: 30px;">{{p}}</td>
+                      </tr>
+                    </table>
+                  <td>
+                    <label>Seleccione un paciente a añadir:</label><br>
+                    <select  class="selectpicker"  style="margin-left: 10px" name="paciente" [(ngModel)] = "pacienteSelected">
+                      <option [ngValue]="p" *ngFor="let p of pacientes">
+                         {{p.nombre}} {{p.apellidos}}
+                      </option>
+                    </select><br><br>
+                    <button (click)="anyadirPaciente(m.id)" class="btn btn-secondary" style="margin-left: 10px">Añadir paciente seleccionado</button>
+                    <button (click)="deleteMedico(m.id)" class="btn btn-black" style="margin-left: 10px">Eliminar</button>
+                  </td> 
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

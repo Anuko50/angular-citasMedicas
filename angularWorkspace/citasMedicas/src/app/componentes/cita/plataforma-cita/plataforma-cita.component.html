@@ -1,0 +1,49 @@
+<div id="wrapper" class="animate" >
+    <app-nav-bar></app-nav-bar>
+
+    <div class="container-fluid" style="margin-bottom: 20px; margin-top: 80px; ">
+        
+        
+          <div class="card" >
+            <div class="card-body" >
+              <h5 class="card-title">Acciones con citas</h5>
+              <h6 class="card-subtitle mb-2 text-muted" style="margin-bottom: 10px; margin-top: 10px;" > Estas son las diferentes funcionalidades que hay respecto a las citas.</h6>
+              <button class="btn btn-black" style="margin-bottom: 10px; margin-top: 10px;" (click)="Crear()" >Crear una nueva cita</button>
+              <br>
+              <button class="btn btn-black" style="margin-bottom: 10px; margin-top: 10px;" (click)="lista()">Listado de citas</button>
+              <br>
+              <label>Buscar cita concreta:</label>
+              <br>
+                <input type="number" style="margin-left: 5 px;" [(ngModel)]="idABuscar">
+                <br>
+                <button class="btn btn-black" style="margin-bottom: 10px; margin-top: 10px;" (click)="buscar()">Buscar</button>
+              
+                
+                
+                <div *ngIf="quiere">
+                    <div class="card-body">
+                        <h5 class="card-title">Cita encontrada:</h5>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="row">Id:</th>
+                              <th scope="row">Fecha:</th>
+                              <th scope="row">Motivo de la cita:</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td scope="col">{{citaBuscada.id}}</td>
+                              <td>{{citaBuscada.fechaHora}}</td>
+                              <td>{{citaBuscada.motivoCita}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+
+            </div>
+          </div>  
+    </div>
+</div>
+

@@ -1,0 +1,76 @@
+<div id="wrapper" class="animate" >
+    <app-nav-bar></app-nav-bar>
+
+    <div class="container-fluid" style="margin-bottom: 20px; margin-top: 40px; ">
+          <div class="row" style="margin-bottom: 20px; margin-top: 80px;">
+        <div class="col" >
+          <div class="card" >
+            <div class="card-body" >
+              <h5 class="card-title">Paciente</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Acciones que puedes realizar con los pacientes.</h6>
+              <p class="card-text">Pulsando aquí podrás ver todos los pacientes disponibles y podrás modificar o eliminar la que gustes.</p>
+              <a href="./lista-pacientes" class="card-link">lista de todos los pacientes</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Médico</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Acciones que puedes realizar con los médicos.</h6>
+              <p class="card-text">Pulsando aquí podrás ver todos los médicos disponibles y podrás modificar o eliminar el que gustes.</p>
+              <a href="./lista-medicos" class="card-link">lista de todos los médicos</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Cita</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Acciones que puedes realizar con las citas.</h6>
+              <p class="card-text">Pulsando aquí podrás ver todas las citas disponibles y podrás modificar o eliminar la que gustes.</p>
+              <a href="./lista-citas" class="card-link">lista de todos las citas</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Diagnóstico</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Acciones que puedes realizar con los diagnósticos.</h6>
+              <p class="card-text">Pulsando aquí podrás ver todos los diagnosticos disponibles y podrás modificar o eliminar el que gustes.</p>
+              <a href="./lista-diagnosticos" class="card-link">lista de todos los diagnosticos</a>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-bottom: 20px; margin-top: 50px; margin-bottom: 50px;">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tus datos:</h5>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="row">Nombre de Usuario:</th>
+                    <th scope="row">Clave:</th>
+                    <th scope="row">Nombre:</th>
+                    <th scope="row">Apellidos:</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="col">{{userActual.user}}</td>
+                    <td>{{userActual.clave}}</td>
+                    <td>{{userActual.nombre}}</td>
+                    <td>{{userActual.apellidos}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 

@@ -1,0 +1,35 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="sidenav">
+   <div class="login-main-text">
+      <h2 style="margin-top: 0.5%; margin-left: 10%;"><br> Creación de un Diagnóstico</h2>
+      <p style="margin-top: 0.5%; margin-left: 10%;">Rellene los campos para crear un diagnóstico.</p>
+   </div>
+</div>
+<div class="main" style="margin-top:10%; margin-bottom: 80 px;">
+   <div class="col-md-6 col-sm-12" style="margin-top: 80 px; margin-bottom: 80 px; padding: 35px;">
+      <div class="login-form">
+         <form >
+            <div class="form-group" >
+               <label>Valoración del especialista:</label>
+               <input type="text"  required class="form-control" id="valoracionEspecialista" name="valoracionEspecialista" placeholder="valoracionEspecialista" [(ngModel)]="diagnostiocoNuevo.valoracionEspecialista">
+            </div>
+            <div class="form-group" >
+               <label>Enfermedad:</label>
+               <input type="text"  required class="form-control" id="enfermedad" name="enfermedad" placeholder="enfermedad" [(ngModel)]="diagnostiocoNuevo.enfermedad">
+            </div>
+            <div class="form-group"  >
+               <label for="medico">Cita asociada:</label><br>
+               <select  class="selectpicker"  name="cita" [(ngModel)] = "citaSelected">
+                     <option [ngValue]="c" *ngFor="let c of citas">
+                        {{c.id}}
+                     </option>
+               </select><br>
+               <br>
+              <button type="submit"  class="btn btn-black" (click)="crearDiagnostico()">Crear diagnóstico</button>
+           </div>
+            </form>
+      </div>
+   </div>
+</div>
+

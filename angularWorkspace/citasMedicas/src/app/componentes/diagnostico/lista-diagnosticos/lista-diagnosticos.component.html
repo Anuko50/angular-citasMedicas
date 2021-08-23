@@ -1,0 +1,31 @@
+<div class="row" style="margin-bottom: 20px; margin-top: 50px; margin-bottom: 50px;">
+    <app-nav-bar></app-nav-bar>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Diagnosticos:</h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="row">id del diagnóstico:</th>
+                <th scope="row">Valoración del especialista:</th>
+                <th scope="row">Enfermedad:</th>
+                <th scope="row">Cita asociada:</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let d of diagnosticos">
+                    <td>{{ d.id }}</td>
+                    <td>{{ d.valoracionEspecialista }}</td>
+                    <td>{{ d.enfermedad }}</td>
+                    <td>{{ d.idCita }}</td>
+                   <!--  <td>
+                      <button (click)="deleteDiagnostico(d.id)" class="btn btn-black" style="margin-left: 10px">Eliminar</button>
+                  </td> -->
+                  </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,52 @@
+<div id="wrapper" class="animate" >
+    <app-nav-bar></app-nav-bar>
+
+    <div class="container-fluid" style="margin-bottom: 20px; margin-top: 80px; ">
+        
+        
+          <div class="card" >
+            <div class="card-body" >
+              <h5 class="card-title">Acciones con diagnósticos</h5>
+              <h6 class="card-subtitle mb-2 text-muted" style="margin-bottom: 10px; margin-top: 10px;" > Estas son las diferentes funcionalidades que hay respecto a los diagnósticos.</h6>
+              <button class="btn btn-black" style="margin-bottom: 10px; margin-top: 10px;" (click)="Crear()" >Crear un nuevo diagnóstico</button>
+              <br>
+              <button class="btn btn-black" style="margin-bottom: 10px; margin-top: 10px;" (click)="lista()">Listado de diagnósticos</button>
+              <br>
+              <label>Buscar diagnóstico concreto:</label>
+              <br>
+                <input type="number" style="margin-left: 5 px;" [(ngModel)]="idABuscar">
+                <br>
+                <button class="btn btn-black" style="margin-bottom: 10px; margin-top: 10px;" (click)="buscar()">Buscar</button>
+              
+                
+                
+                <div *ngIf="quiere">
+                    <div class="card-body">
+                        <h5 class="card-title">Diagnóstico encontrado:</h5>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="row">Id:</th>
+                              <th scope="row">Valoración del especialista:</th>
+                              <th scope="row">Enfermedad:</th>
+                              <th scope="row">Cita asociada:</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td scope="col">{{diagnosticoBuscado.id}}</td>
+                              <td>{{diagnosticoBuscado.valoracionEspecialista}}</td>
+                              <td>{{diagnosticoBuscado.enfermedad}}</td>
+                              <td>{{diagnosticoBuscado.idCita}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                </div>
+              
+            
+            </div>
+          </div>  
+    </div>
+</div>

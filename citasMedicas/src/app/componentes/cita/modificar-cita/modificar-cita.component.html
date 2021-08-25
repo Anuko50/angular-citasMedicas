@@ -1,0 +1,52 @@
+<body style="background-color: rgb(146, 168, 95);">
+<div id="wrapper" class="animate" style="background-color: rgb(146, 168, 95);">
+    <app-nav-bar></app-nav-bar>
+<div style="padding-left: 10%; padding-right: 10%; padding-top: 5%; background-color: rgb(146, 168, 95);" >
+    <div class="card" style="padding-top: 10px; padding-left: 10px; padding-right: 10px; ">
+        <div class="card-body">
+          <h5 class="card-title">Datos de la cita que va a modificar:</h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="row">id de la cita:</th>
+                <th scope="row">fecha y hora: </th>
+                <th scope="row">motivo de la cita:</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ citaVieja.id }}</td>
+                    <td>{{ citaVieja.fechaHora }}</td>
+                    <td>{{ citaVieja.motivoCita }}</td>
+                  </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+      <div class="main" style="background-color: rgb(146, 168, 95);">
+
+           <div class="login-form" style="padding-right: 50%; background-color: rgb(146, 168, 95);">
+              <form >
+                 <div class="form-group" >
+                    <label>Fecha y hora:</label>
+                    <input type="datetime-local" step="1" [(ngModel)]="fecha" class="form-control" id="fechaHora" name="fechaHora" placeholder="Introduzca su fechaHora" required #fechaHora="ngModel" >
+                 </div>
+                 <div class="form-group" >
+                    <label>Motivo de la cita:</label>
+                    <input type="text"  required class="form-control" placeholder="motivo de la cita" name="motivoCita" [(ngModel)]="motivoCita">
+                 </div>
+                 <br>
+                 <div class="form-group"  >
+                    <button type="button"  class="btn btn-black" (click)="modificar()">Modificar cita</button>
+                 </div>
+                 </form>
+           </div>
+
+     </div>
+
+
+</div>
+<br><br><br><br><br>
+</body>
